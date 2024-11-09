@@ -4,12 +4,17 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { store } from './store/index'
 import Home from './pages/Home'
 import { Provider } from 'react-redux'
+import Adicionar from './pages/Adicionar'
 
 const router = createBrowserRouter(
   [
     {
       path: '/',
       element: <Home />
+    },
+    {
+      path: '/adicionar',
+      element: <Adicionar />
     }
   ],
   {

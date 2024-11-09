@@ -8,6 +8,16 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     list-style: none;
   }
+
+  body {
+    background: rgb(211, 211, 211);
+    background: linear-gradient(
+    180deg,
+    rgba(170, 170, 170, 1) 0%,
+    rgba(255, 255, 255, 1) 90%
+    );
+    background-repeat: no-repeat;
+  }
 `
 
 export const Container = styled.div`
@@ -15,12 +25,5 @@ export const Container = styled.div`
   font-size: 0.8rem;
   width: 100%;
   margin: 0 auto;
-  background: rgb(211, 211, 211);
-  background: linear-gradient(
-    180deg,
-    rgba(211, 211, 211, 1) 0%,
-    rgba(255, 255, 255, 1) 90%
-  );
-
   height: 100vh;
 `

@@ -1,25 +1,32 @@
 import React from 'react'
 import * as S from './styles'
-import { useDispatch } from 'react-redux'
-import { adicionar } from '../../store/reducers/contato'
+import { Link } from 'react-router-dom'
 
-const Header = () => {
-  const dispatch = useDispatch()
+type Props = { adicionar?: boolean }
 
+const Header = ({ adicionar }: Props) => {
   return (
     <S.Header>
       <h1>Agenda</h1>
       <nav>
         <ul>
-          <li>
-            <button onClick={() => dispatch(adicionar())}>Adicionar</button>
-          </li>
-          <li>
-            <button>Editar</button>
-          </li>
-          <li>
-            <button>Excluir</button>
-          </li>
+          {adicionar ? (
+            <li>
+              <Link to={'/'}>Voltar</Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to={'/adicionar'}>Adicionar</Link>
+              </li>
+              <li>
+                <button>Editar</button>
+              </li>
+              <li>
+                <button>Excluir</button>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </S.Header>

@@ -14,6 +14,12 @@ export const Header = styled.header`
       font-weight: bold;
       margin-left: 20px;
 
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: normal;
+      }
+
       button {
         border: none;
         background-color: transparent;

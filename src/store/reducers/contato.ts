@@ -1,21 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import ContatoClass from '../../models/Contato'
 
-const initialState: ContatoClass[] = [
-  {
-    id: 0,
-    nome: 'Lucas Ghizzo de Moraes',
-    telefone: '48999025606',
-    email: 'ghizzolucas@gmail.com'
-  }
-]
+const initialState: ContatoClass[] = []
 
 const ContatoSlice = createSlice({
   name: 'contato',
   initialState,
   reducers: {
-    adicionar: (state) => {
-      console.log(state)
+    adicionar: (state, action: PayloadAction<ContatoClass>) => {
+      action.payload.id = state.length
+      state.push(action.payload)
     }
   }
 })

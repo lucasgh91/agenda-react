@@ -7,6 +7,24 @@ export const ListaContatos = styled.table`
   border-spacing: 2px;
 
   thead {
-    font-size: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin-top: 10px;
+    }
   }
+`
+
+export const Alerta = styled.div`
+  margin: 50px auto;
+  max-width: 250px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffd7d7;
+  align-items: center;
 `
