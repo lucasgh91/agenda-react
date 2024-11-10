@@ -3,11 +3,13 @@ import ContatoClass from '../../models/Contato'
 
 type stateType = {
   idSelecionado: number,
+  excluir: boolean,
   contatos: ContatoClass[]
 }
 
 const initialState: stateType = {
   idSelecionado: 0,
+  excluir: false,
   contatos: []
 }
 
@@ -29,9 +31,25 @@ const ContatoSlice = createSlice({
       state.idSelecionado !== action.payload
         ? (state.idSelecionado = action.payload)
         : (state.idSelecionado = 0)
+    },
+    alterarStatusExcluir: (state) => {
+      state.excluir = !state.excluir
+    },
+    excluir: (state) => {
+      state.contatos = state.contatos.filter(
+        (c) => c.id !== state.idSelecionado
+      )
+      state.idSelecionado = 0
+      state.excluir = false
     }
   }
 })
 
-export const { adicionar, editar, editarIdSelecionado } = ContatoSlice.actions
+export const {
+  adicionar,
+  editar,
+  excluir,
+  alterarStatusExcluir,
+  editarIdSelecionado
+} = ContatoSlice.actions
 export default ContatoSlice.reducer

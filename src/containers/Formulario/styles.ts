@@ -25,14 +25,8 @@ export const Formulario = styled.div`
     }
 
     button {
-      width: 100%;
-      display: inline-block;
-      margin: 10px auto;
       max-width: 100px;
-      padding: 5px;
-      cursor: pointer;
-      border: none;
-      background-color: rgba(0, 181, 21, 0.49);
+      width: 100%;
     }
   }
 `

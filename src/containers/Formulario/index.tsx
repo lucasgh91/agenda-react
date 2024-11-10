@@ -3,6 +3,7 @@ import * as S from './styles'
 import { useDispatch } from 'react-redux'
 import { adicionar } from '../../store/reducers/contato'
 import { useNavigate } from 'react-router-dom'
+import { ButtonVerde } from '../../utils/styles'
 
 const Formulario = () => {
   const dispatch = useDispatch()
@@ -24,6 +25,8 @@ const Formulario = () => {
       <h2>Novo Contato</h2>
       <form onSubmit={cadastraNovoContato}>
         <input
+          autoComplete="true"
+          id="nome"
           required
           value={nome}
           onChange={(e) => setNome(e.target.value)}
@@ -31,6 +34,8 @@ const Formulario = () => {
           placeholder="Nome completo"
         />
         <input
+          autoComplete="true"
+          id="tel"
           required
           value={tel}
           onChange={(e) => setTel(e.target.value)}
@@ -38,13 +43,15 @@ const Formulario = () => {
           placeholder="Telefone"
         />
         <input
+          autoComplete="true"
+          id="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="E-mail"
         />
-        <button type="submit">Adicionar</button>
+        <ButtonVerde type="submit">Adicionar</ButtonVerde>
       </form>
     </S.Formulario>
   )

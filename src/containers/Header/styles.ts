@@ -9,9 +9,9 @@ export const Header = styled.header`
 
   ul {
     display: flex;
+    align-items: baseline;
 
     li {
-      font-weight: bold;
       margin-left: 20px;
 
       a {

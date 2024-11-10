@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { editar } from '../../store/reducers/contato'
 import { useNavigate } from 'react-router-dom'
+import { ButtonVerde } from '../../utils/styles'
 
 const FormularioEditar = () => {
   const dispatch = useDispatch()
@@ -38,6 +39,8 @@ const FormularioEditar = () => {
       <h2>Editar Contato</h2>
       <form onSubmit={(e) => editarContato(e)}>
         <input
+          autoComplete="true"
+          id="nome"
           required
           value={nome}
           onChange={(e) => setNome(e.target.value)}
@@ -45,6 +48,8 @@ const FormularioEditar = () => {
           placeholder="Nome completo"
         />
         <input
+          autoComplete="true"
+          id="tel"
           required
           value={tel}
           onChange={(e) => setTel(e.target.value)}
@@ -52,13 +57,15 @@ const FormularioEditar = () => {
           placeholder="Telefone"
         />
         <input
+          autoComplete="true"
+          id="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="E-mail"
         />
-        <button type="submit">Atualizar</button>
+        <ButtonVerde type="submit">Atualizar</ButtonVerde>
       </form>
     </S.Formulario>
   )

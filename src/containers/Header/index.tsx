@@ -3,6 +3,7 @@ import * as S from './styles'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
+import BotaoExcluir from '../../components/BotaoExcluir'
 
 type Props = { home?: boolean }
 
@@ -32,7 +33,7 @@ const Header = ({ home }: Props) => {
                     <Link to={'/editar'}>Editar</Link>
                   </li>
                   <li>
-                    <button>Excluir</button>
+                    <BotaoExcluir>Excluir</BotaoExcluir>
                   </li>
                 </>
               )}

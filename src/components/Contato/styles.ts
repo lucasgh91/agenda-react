@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const Contato = styled.tr`
-  background-color: #f3f3f3;
+  background-color: rgba(243, 243, 243, 0.5);
 
   &:nth-child(even) {
-    background-color: #dfdfdf;
+    background-color: rgba(223, 223, 223, 0.5);
   }
   td {
     padding: 10px;
