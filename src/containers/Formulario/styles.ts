@@ -32,7 +32,7 @@ export const Formulario = styled.div`
       padding: 5px;
       cursor: pointer;
       border: none;
-      background-color: #c7c7c7;
+      background-color: rgba(0, 181, 21, 0.49);
     }
   }
 `

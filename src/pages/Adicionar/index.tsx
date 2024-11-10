@@ -1,12 +1,11 @@
+import React from 'react'
 import Formulario from '../../containers/Formulario'
 import Header from '../../containers/Header'
-
-var React = require('react')
 
 const Adicionar = () => {
   return (
     <>
-      <Header adicionar={true} />
+      <Header home={false} />
       <Formulario />
     </>
   )

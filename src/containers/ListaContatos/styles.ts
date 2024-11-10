@@ -25,6 +25,6 @@ export const Alerta = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #ffd7d7;
+  background-color: rgba(255, 152, 152, 0.5);
   align-items: center;
 `

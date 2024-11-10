@@ -5,6 +5,7 @@ import { store } from './store/index'
 import Home from './pages/Home'
 import { Provider } from 'react-redux'
 import Adicionar from './pages/Adicionar'
+import Editar from './pages/Editar'
 
 const router = createBrowserRouter(
   [
@@ -15,6 +16,10 @@ const router = createBrowserRouter(
     {
       path: '/adicionar',
       element: <Adicionar />
+    },
+    {
+      path: '/editar',
+      element: <Editar />
     }
   ],
   {

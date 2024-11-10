@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 
 const ListaContatos = () => {
-  const contatos = useSelector((state: RootReducer) => state.contato)
+  const contatos = useSelector((state: RootReducer) => state.contato.contatos)
 
   return (
     <>
