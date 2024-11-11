@@ -7,6 +7,12 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 
+  h1 {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+  }
+
   ul {
     display: flex;
     align-items: baseline;
@@ -20,10 +26,20 @@ export const Header = styled.header`
         font-weight: normal;
       }
 
+      a,
       button {
-        border: none;
-        background-color: transparent;
+        text-decoration: none;
+        color: black;
+        font-weight: normal;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 4px 10px;
+        background-color: rgba(255, 255, 255, 0.3);
         cursor: pointer;
+        transition: background-color 0.5s ease;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.5);
+        }
       }
     }
   }
